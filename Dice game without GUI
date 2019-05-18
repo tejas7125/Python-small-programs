@@ -1,0 +1,17 @@
+import random
+min = 1
+max = 6
+num = "yes" or "Yes" or "YES"
+while num == "yes" or num == "YES" or num == "YeS":
+    guess = int(input("Guess the number between 1 to 6 "))
+    print("you guessed the nubmer", guess)
+    print("Rolling the dice")
+    result = random.randint(min,max)
+    if result == guess:
+        print("you guessed the right number")
+        num = str(input("If you want to play again then type " + 'yes' +" otherwise type " + "no  "))
+    else:
+        print("The result is ", result, "Try again...")
+        num = str(input("If you want to play again then type " + 'yes' +" otherwise type " + "no  "))
+if num == "no" or "No" or "NO":
+    print("program terminated")
